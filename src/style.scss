@@ -1,0 +1,46 @@
+// import cisco fonts from momentum-ui
+$brand-font-folder: '~@momentum-ui/core/fonts';
+@import '~@momentum-ui/core/scss/tools/functions/core.scss';
+@import '~@momentum-ui/core/scss/typography/mixins.scss';
+// import font
+@include brand-font-faces;
+// import momentum-ui color variables
+// @import '~@momentum-ui/core/scss/colors/settings-base.scss';
+@import './momentum-colors.scss';
+
+// set fonts in bulma
+$family-primary: "CiscoSansTT Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// set bulma colors using momentum-ui colors
+$info: $md-purple-50;
+$danger: $md-red-50;
+$warning: $md-yellow-50;
+$success: $md-green-50;
+$primary: $md-blue-50;
+
+// darken the buttons more on hover and click
+// this matches the momentum-ui code pretty closely
+$button-darken-full: 17%;
+$button-darken-half: 9%;
+
+// lighten up the modal/dialog background color
+$modal-background-background-color: rgba(0, 0, 0, 0.45);
+
+// set links to the primary color
+$link: $primary;
+
+// import bulma source
+@import "~bulma";
+
+// import '~buefy/dist/buefy.css';
+// import buefy source
+@import "~buefy/src/scss/buefy";
+
+// import material design icons
+$mdi-font-path: '~@mdi/font/fonts';
+@import "~@mdi/font/scss/materialdesignicons.scss";
+
+// set buefy b-tag font to regular instead of light
+span.tag {
+  font-family: "CiscoSansTT Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
